@@ -1,0 +1,32 @@
+.#{$prefix}legal-wrapper {
+  background-image: $light-gradient;
+  height: 100%;
+
+  .wrapper-inner {
+    padding: 16px;
+    overflow: auto;
+    height: inherit;
+    position: relative;
+
+    p {
+      color: $text-color-primary;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 21px;
+      margin: 0 0 32px 0;
+
+      a {
+        color: $primary;
+        text-decoration: none;
+      }
+    }
+
+    h2 {
+      color: $text-color-primary;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 27px;
+      margin-bottom: 16px;
+    }
+  }
+}

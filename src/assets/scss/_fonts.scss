@@ -1,0 +1,17 @@
+// Japanese Fonts
+@font-face {
+  font-family: "Hiragino Kaku Gothic Pro";
+  font-weight: 600;
+  font-display: swap;
+  src:
+    local('Hiragino Kaku Gothic Pro')
+    url("@fonts/hiragino-kaku-gothic-pro/Hiragino-Kaku-Gothic-Pro-W6.woff") format("woff");
+}
+@font-face {
+  font-family: "Hiragino Kaku Gothic Pro";
+  font-weight: 300;
+  font-display: swap;
+  src:
+    local('Hiragino Kaku Gothic Pro')
+    url("@fonts/hiragino-kaku-gothic-pro/Hiragino-Kaku-Gothic-Pro-W3.woff") format("woff");
+}

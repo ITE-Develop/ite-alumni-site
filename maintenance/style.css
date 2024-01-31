@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Hiragino Kaku Gothic Pro";
+  font-weight: 300;
+  src: url("./fonts/Hiragino-Kaku-Gothic-Pro-W3.otf") format("opentype");
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  background-image: linear-gradient(to right, #ffffff, #eff4f9);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.content {
+  text-align: center;
+  min-width: 343px;
+  min-height: 274px;
+}
+
+.image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 259.55px;
+  height: auto;
+}
+
+p {
+  font-family: "Hiragino Kaku Gothic Pro";
+  color: #5e5e5e;
+  margin: 0;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+}

@@ -1,0 +1,72 @@
+.#{$prefix}train-wrapper {
+  .wrapper {
+    .disaster-post-wrapper {
+      background-color: #FFFFFFF2;
+      padding: 8px 16px;
+      margin: 0 16px 8px 16px;
+      border-radius: 8px;
+      box-shadow: 0px 1px 2px 0px #00628052;
+
+      .wrapper-inner {
+        .text {
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 21px;
+          margin: 0;
+          color: $text-color-primary;
+        }
+        .limit-text {
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .city-code {
+          .tags {
+            color: $primary;
+            padding-right: 5px;
+          }
+          .time {
+            color: $secondary;
+            white-space: nowrap;
+          }
+        }
+        .text-color {
+          color: #1B1B1B;
+        }
+        .image-wrapper {
+          position: relative;
+          height: 167px;
+          overflow: hidden;
+        }
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          height: auto;
+        }
+        .place {
+          color: $secondary;
+          margin: 8px 0;
+        }
+        .open-app {
+          margin: 0;
+          padding: 0;
+          a {
+            align-items: center;
+            text-decoration: none;
+          }
+        }
+
+        .text-browse {
+          color: $primary;
+          font-style: normal;
+          padding: 0 4px;
+        }
+        }
+    }
+  }
+}

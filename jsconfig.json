@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "es2017",
+        "allowSyntheticDefaultImports": false,
+        "baseUrl": "./",
+        "paths": {
+            "@/*": ["src/*"],
+            "@composables": ["src/composables/*"],
+            "@fonts": ["src/assets/fonts/*"],
+            "@images": ["src/assets/images/*"],
+            "@middlewares" : ["src/router/middlewares"]
+        }
+    },
+    "exclude": ["node_modules", "dist", "docs"]
+}

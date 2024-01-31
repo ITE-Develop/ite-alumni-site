@@ -1,0 +1,145 @@
+.offcanvas {
+  background-image: $offcanvas-body-gradient;
+  box-shadow: $box-shadow-primary;
+  border-radius: 8px 8px 0px 0px;
+  overflow: hidden;
+  transition: none;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  &-bar {
+    background-color: #E2E2E2;
+    width: 65px;
+    height: 5px;
+    border-radius: 14px;
+    cursor: pointer;
+    margin: $BasicSmall auto 0 auto;
+  }
+
+  &-header {
+    padding: 0;
+    &--wrapper {
+      display: flex;
+      width: 100%;
+    }
+  }
+
+  &-body {
+    padding: $BasicRegular;
+    overflow: hidden;
+  }
+
+  &--title {
+    color: $text-color-primary;
+    font-size: $h3-font-size;
+    font-style: normal;
+    font-weight: $font-weight-bold;
+    line-height: normal;
+    margin-top: $BasicSmall;
+    margin-bottom: $BasicXSmall;
+  }
+
+  &--badge-title{
+    margin-bottom: $BasicSmall;
+  }
+
+  &--location {
+    &--text{
+      color: $text-color-primary;
+      font-size: $h2-font-size;
+      font-style: normal;
+      font-weight: $font-weight-bold;
+      line-height: normal;
+      overflow: hidden;
+      width: 100%;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  }
+
+  &--time {
+    display: flex;
+    align-items: flex-start;
+    &--text {
+      color: $text-color-secondary;
+      font-size: $caption-font-size;
+      font-style: normal;
+      font-weight: $font-weight-normal;
+      line-height: normal;
+    }
+  }
+
+  &--facility-status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: $BasicSmall 0;
+  }
+
+
+  &--warning-level {
+    background: $fill-color-light;
+    display: flex;
+    padding: 10px $BasicSmall;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 1px 2px 0px #00628052;
+    border-radius: 4px;
+    &__title {
+      color: $text-color-primary;
+      text-align: center;
+      font-size: $h3-font-size;
+      font-style: normal;
+      font-weight: $font-weight-bold;
+      line-height: $line-height-lg;
+      margin-bottom: $BasicSmall;
+    }
+
+    &__subtitle {
+      color: $text-color-primary;
+      font-size: $normal-font-size;
+      font-style: normal;
+      font-weight: $font-weight-normal;
+      line-height: normal;
+      margin-bottom: $BasicSmall;
+    }
+  }
+
+  &-close {
+    box-shadow: none;
+  }
+
+}
+
+.horizontal-bar {
+  width: 100%;
+  height: 1px;
+  background: #DDD;
+}
+
+.sb-badge {
+  display: flex;
+  padding: $BasicSmall;
+  border-radius: $border-radius-md;
+  object-fit: cover;
+  margin: 0 $BasicSmall 0 0;
+  height: 29px;
+  align-items: center;
+
+  &--item {
+    font-size: $bold-font-size;
+    font-style: normal;
+    color: $light;
+    font-weight: $font-weight-bold;
+  }
+}
+
+.offcanvas-backdrop{
+  z-index: 0;
+  background-color: $body-color;
+}
+
+.offcanvas-backdrop.show{
+  opacity: $opacity-backdrop;
+}

@@ -1,0 +1,96 @@
+.#{$prefix}train-wrapper {
+
+  .train-wrapper {
+    display: flex;
+    margin: 0 15px 8px 15px;
+
+    .wrapper-inter {
+      box-shadow: 0px 1px 2px 0px #00628052;
+      background-color: #FFFFFFF2;
+      border-radius: 8px;
+      padding: 8px;
+      width: 100%;
+    }
+
+    .line {
+      .line-place {
+        align-items: center;
+        display: flex;
+        justify-content: start;
+      }
+
+      .line-name {
+        font-size: 14px;
+        font-weight: $font-weight-bold;
+        font-style: normal;
+        line-height: 21px;
+        margin: 0 0 0 $BasicSmall;
+      }
+
+      span {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+      }
+
+      .line-status {
+        border-bottom: 1px solid #DDDDDD;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: $BasicXSmall 0 $BasicSmall 0;
+        margin-bottom: $BasicSmall;
+
+        .status {
+          font-size: 16px;
+          font-weight: $font-weight-bold;
+          font-style: normal;
+          line-height: 24px;
+        }
+      }
+    }
+
+    .line-text-inner {
+      display: flex;
+      justify-content: space-between;
+      margin: 0px;
+
+      .announce-line {
+        color: $secondary;
+        font-size: $normal-font-size;
+        line-height: normal;
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+    .line-text {
+      color: $secondary;
+      font-size: 14px;
+      line-height: 21px;
+      margin: 0;
+      padding: 8px 0;
+    }
+
+    .other-text-wrapper {
+      display: flex;
+
+      .other-text {
+        color: $primary;
+        font-size: 14px;
+        line-height: 14px;
+        margin: 0 $BasicXSmall 0 0;
+        text-decoration: none;
+      }
+    }
+    .text-stop {
+      color: $stop-color;
+    }
+    .text-delay {
+      color: $delay-color;
+    }
+    .text-normal {
+      color: $normal-color;
+    }
+  }
+}

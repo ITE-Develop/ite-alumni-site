@@ -1,0 +1,166 @@
+{
+  "data": [
+      {
+          "id": "tsunami_0",
+          "title": "エコプラザ",
+          "location": "津波避難ビル",
+          "evacuation_target": null,
+          "description": "洪水、土砂、津波、内水氾濫",
+          "type": "tsunami",
+          "coordinate": {
+              "type": "Point",
+              "coordinates": [
+                  139.7570751370317,
+                  35.65882860816276
+              ]
+          }
+      },
+      {
+          "id": "tsunami_2",
+          "title": "障害保険福祉センター",
+          "location": "津波避難ビル",
+          "evacuation_target": null,
+          "description": "洪水、土砂、津波、内水氾濫",
+          "type": "tsunami",
+          "coordinate": {
+              "type": "Point",
+              "coordinates": [
+                  139.75548322651503,
+                  35.65164896825618
+              ]
+          }
+      },
+      {
+          "id": "tsunami_3",
+          "title": "東京ポートシティ竹芝",
+          "location": "津波避難ビル",
+          "evacuation_target": null,
+          "description": "洪水、土砂、津波、内水氾濫",
+          "type": "tsunami",
+          "coordinate": {
+              "type": "Point",
+              "coordinates": [
+                  139.7608684429107,
+                  35.65519905500094
+              ]
+          }
+      },
+      {
+          "id": "tsunami_7",
+          "title": "プラザ神明",
+          "location": "津波避難ビル",
+          "evacuation_target": null,
+          "description": "洪水、土砂、津波、内水氾濫",
+          "type": "tsunami",
+          "coordinate": {
+              "type": "Point",
+              "coordinates": [
+                  139.75762169502252,
+                  35.65867582093498
+              ]
+          }
+      },
+      {
+          "id": "refuge_0",
+          "title": "エコプラザ",
+          "location": "避難所（区民避難所）",
+          "evacuation_target": "対象の災害種別",
+          "description": "洪水、土砂、津波、内水氾濫",
+          "status_system": "港区避難所開設状況システム",
+          "url": "https://minato.hinanjo.dmacs.jp/",
+          "type": "refuge",
+          "coordinate": {
+              "type": "Point",
+              "coordinates": [
+                  139.75689376054473,
+                  35.65884083739564
+              ]
+          }
+      },
+      {
+          "id": "refuge_1",
+          "title": "神明子ども中高生プラザ・神明いきいきプラザ",
+          "location": "避難所（区民避難所）",
+          "evacuation_target": "対象の災害種別",
+          "description": "洪水、土砂、津波、内水氾濫",
+          "status_system": "港区避難所開設状況システム",
+          "url": "https://minato.hinanjo.dmacs.jp/",
+          "type": "refuge",
+          "coordinate": {
+              "type": "Point",
+              "coordinates": [
+                  139.75772595640223,
+                  35.65880902097855
+              ]
+          }
+      },
+      {
+          "id": "facility_3",
+          "title": "東京ポートシティ竹芝",
+          "location": "一時滞在施設\n(帰宅困難者受入施設)",
+          "evacuation_target": "対象の災害種別",
+          "description": "洪水、土砂、津波、内水氾濫",
+          "status_system": "一時滞在施設開設状況",
+          "url": "https://www.city.minato.tokyo.jp/chiikibousai/kitakukonnan.html",
+          "type": "facility",
+          "coordinate": {
+              "type": "Point",
+              "coordinates": [
+                  139.76047147596995,
+                  35.65519033739689
+              ]
+          }
+      },
+      {
+          "id": "facility_4",
+          "title": "芝商業高等学校",
+          "location": "一時滞在施設\n(帰宅困難者受入施設)",
+          "evacuation_target": "対象の災害種別",
+          "description": "洪水、土砂、津波、内水氾濫",
+          "status_system": "一時滞在施設開設状況",
+          "url": "https://www.city.minato.tokyo.jp/chiikibousai/kitakukonnan.html",
+          "type": "facility",
+          "coordinate": {
+              "type": "Point",
+              "coordinates": [
+                  139.76106731407452,
+                  35.656327937644804
+              ]
+          }
+      },
+      {
+          "id": "facility_5",
+          "title": "ニューピアホール",
+          "location": "一時滞在施設\n(帰宅困難者受入施設)",
+          "evacuation_target": "対象の災害種別",
+          "description": "洪水、土砂、津波、内水氾濫",
+          "status_system": "一時滞在施設開設状況",
+          "url": "https://www.city.minato.tokyo.jp/chiikibousai/kitakukonnan.html",
+          "type": "facility",
+          "coordinate": {
+              "type": "Point",
+              "coordinates": [
+                  139.7636279373497,
+                  35.6555377374726
+              ]
+          }
+      },
+      {
+          "id": "facility_6",
+          "title": "ホテルアジュール竹芝",
+          "location": "一時滞在施設\n(帰宅困難者受入施設)",
+          "evacuation_target": "対象の災害種別",
+          "description": "洪水、土砂、津波、内水氾濫",
+          "status_system": "一時滞在施設開設状況",
+          "url": "https://www.city.minato.tokyo.jp/chiikibousai/kitakukonnan.html",
+          "type": "facility",
+          "coordinate": {
+              "type": "Point",
+              "coordinates": [
+                  139.76354923486977,
+                  35.65549368854252
+              ]
+          }
+      }
+  ]
+}

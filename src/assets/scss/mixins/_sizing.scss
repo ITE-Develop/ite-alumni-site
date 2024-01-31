@@ -1,0 +1,28 @@
+@mixin size_square($size, $isImportant: false) {
+  $important: if($isImportant, !important, '');
+  width: #{$size} #{$important};
+  max-width: #{$size} #{$important};
+  min-width: #{$size} #{$important};
+  height: #{$size} #{$important};
+  max-height: #{$size} #{$important};
+  min-height: #{$size} #{$important};
+}
+
+@mixin size_rect($width, $height) {
+  min-width: $width;
+  width: $width;
+  max-width: $width;
+  min-height: $height;
+  height: $height;
+  max-height: $height;
+}
+
+@mixin static_width($width) {
+  min-width: $width;
+  max-width: $width;
+}
+
+@mixin static_height($width) {
+  min-height: $width;
+  max-height: $width;
+}

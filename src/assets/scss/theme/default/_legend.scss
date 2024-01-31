@@ -1,0 +1,89 @@
+.#{$prefix}main {
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 1fr);
+  place-items: start;
+  justify-items: start;
+  gap: 10px;
+}
+
+.sb-legend{
+  width: 280px;
+  top: 89px;
+  background-image: $offcanvas-body-gradient;
+  border-radius: 0px 0px 8px 8px;
+  touch-action: none;
+}
+
+.sb-main > * {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+}
+.sb-main .below {
+  z-index: 0;
+}
+.sb-main .top {
+  z-index: 2;
+}
+
+.title-flood{
+  padding-top: $BasicSmall;
+  padding-left: $BasicRegular;
+  padding-right: $BasicRegular;
+}
+
+.subtitle{
+  padding-left: $BasicRegular;
+  padding-right: $BasicRegular;
+  color: $text-color-secondary;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.text-flood{
+  color: $text-color-primary;
+  text-align: center;
+  font-size: $bold-font-size;
+  font-style: normal;
+  font-weight: $font-weight-bold;
+  line-height: normal;
+  margin: auto 8px auto 0;
+}
+
+.hazard-hanrei{
+  padding: $BasicSmall $BasicRegular;
+}
+
+.sb-legend-expand{
+  width: 280px;
+  top: 89px;
+  background-image: $offcanvas-body-gradient;
+  padding-left: $BasicRegular;
+  padding-right: $BasicRegular;
+  padding-bottom: $BasicXSmall;
+  border-radius: 0 0 8px 8px;
+}
+
+.floor_image{
+  margin: $BasicSmall auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cursor{
+  cursor: pointer;
+}
+
+.legend-expand-text{
+  margin-top: $BasicSmall;
+  color: $text-color-secondary;
+  font-size: $caption-font-size;
+  font-style: normal;
+  font-weight: $font-weight-normal;
+  line-height: normal;
+}

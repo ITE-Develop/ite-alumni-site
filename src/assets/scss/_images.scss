@@ -1,0 +1,43 @@
+.#{$prefix}image {
+  display: block;
+  align-self: center;
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+
+  &-water-level-status {
+    &--normal {
+      width: 345px;
+      height: 57px;
+      background-image: url("@/assets/images/x3/water_level/water_level_status_normal.svg");
+    }
+
+    &--danger {
+      width: 345px;
+      height: 57px;
+      background-repeat: no-repeat;
+      background-image: url("@/assets/images/x3/water_level/water_level_status_danger.svg");
+    }
+  }
+
+  &-refuge-helper{
+    height: 192.77px;
+    background-image: url("@/assets/images/evacuation_helper/site_helper.svg");
+  }
+
+  &-site-helper{
+    height: 192.77px;
+    background-image: url("@/assets/images/evacuation_helper/site_helper.svg");
+  }
+
+  &-facility-helper{
+    height: 192.77px;
+    background-image: url("@/assets/images/evacuation_helper/facility_helper.svg");
+  }
+
+  &-tsunami-helper{
+    height: 192.77px;
+    background-image: url("@/assets/images/evacuation_helper/tsunami_helper.svg");
+  }
+}

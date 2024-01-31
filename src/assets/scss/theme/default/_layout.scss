@@ -1,0 +1,135 @@
+
+.#{$prefix}defaultlayout {
+  //max-width: 720px;
+  //margin: auto;
+
+  .term-title{
+    color: $text-color-primary;
+    text-align: center;
+    font-size: $h2-font-size;
+    font-style: normal;
+    font-weight: $font-weight-bold;
+    line-height: normal;
+  }
+
+  .body-text-term{
+    color: $text-color-primary;
+    font-size: $normal-font-size;
+    font-style: normal;
+    font-weight: $font-weight-normal;
+    line-height: normal;
+  }
+
+  .link-check {
+    color: $text-color-link;
+    background-color: transparent;
+    border: none;
+    padding: 0 0 0 $BasicXSmall;
+  }
+
+  .body-text-term-link{
+    color: $text-color-link;
+    font-size: $normal-font-size;
+    font-style: normal;
+    font-weight: $font-weight-normal;
+    line-height: normal;
+  }
+
+  .btn-accept{
+    background-color: $button-color-primary;
+    color: $text-color-secondary;
+    border: none;
+    border-radius: $border-radius-large;
+    height: 40px;
+  }
+
+  .btn-accept:hover{
+    background-color: $button-color-primary;
+    color: $text-color-secondary;
+    border: none;
+    border-radius: $border-radius-large;
+    height: 40px;
+  }
+
+  .btn-disable {
+    background-color: $fill-color-disable;
+    color: $text-color-secondary;
+    border: none;
+    border-radius: $border-radius-large;
+    height: 40px;
+  }
+
+  .btn-disable:hover {
+    background-color: $fill-color-disable;
+    color: $text-color-secondary;
+    border: none;
+    border-radius: $border-radius-large;
+    height: 40px;
+  }
+
+  .cancel-modal-info {
+    color: $text-color-primary;
+    font-size: $caption-font-size;
+    font-style: normal;
+    font-weight: $font-weight-normal;
+    line-height: normal;
+    padding-left: $BasicRegular;
+    padding-right: $BasicRegular;
+    padding-bottom: $BasicRegular;
+  }
+
+  .reject-text {
+    color: $text-color-link;
+    font-size: $h3-font-size;
+    font-style: normal;
+    font-weight: $font-weight-bold;
+    line-height: normal;
+  }
+
+  .reject {
+    display: flex;
+    height: 40px;
+    width: 162px;
+    padding: $BasicSmall $BasicRegular;
+    justify-content: center;
+    align-items: center;
+    border-radius: $border-radius-large;
+    background: $button-color-secondary;
+    box-shadow: $box-shadow-primary;
+    border: none;
+    margin-right: $BasicRegular;
+  }
+
+  .reject:hover {
+    height: 40px;
+    display: flex;
+    width: 162px;
+    padding: $BasicSmall $BasicRegular;
+    justify-content: center;
+    align-items: center;
+    border-radius: $border-radius-large;
+    background: $button-color-secondary;
+    box-shadow: $box-shadow-primary;
+    border: none;
+    margin-right: $BasicRegular;
+  }
+
+  .accept {
+    height: 40px;
+    display: flex;
+    width: 162px;
+    padding: $BasicSmall $BasicRegular;
+    justify-content: center;
+    align-items: center;
+    border-radius: $border-radius-large;
+    background: $fill-color-primary;
+  }
+
+  .accept-text {
+    color: $text-color-reverse;
+    font-size: $h3-font-size;
+    font-style: normal;
+    font-weight: $font-weight-bold;
+    line-height: normal;
+  }
+}

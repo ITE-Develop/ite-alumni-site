@@ -1,0 +1,141 @@
+.#{$prefix}icon {
+  $icon-size-sm-x: 20px;
+  $icon-size-sm-y: 20px;
+  $icon-size-x: 24px;
+  $icon-size-y: 24px;
+  $icon-size-md-x: 28px;
+  $icon-size-md-y: 28px;
+  $icon-size-top-x: 32px;
+  $icon-size-top-y: 32px;
+  $icon-size-lg-x: 40px;
+  $icon-size-lg-y: 40px;
+  $icon-size-xl-x: 48px;
+  $icon-size-xl-y: 48px;
+  $icon-size-xs-x: 16px;
+  $icon-size-xs-y: 16px;
+
+  width: $icon-size-x;
+  height: $icon-size-y;
+  align-self: center;
+  opacity: 1;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &-align-auto {
+    align-self: auto;
+  }
+
+  &-min {
+    min-width: $icon-size-x;
+    min-height: $icon-size-y;
+
+    &-x {
+      min-width: $icon-size-x;
+    }
+
+    &-y {
+      min-height: $icon-size-y;
+    }
+  }
+
+  &-xs {
+    width: $icon-size-xs-x;
+    height: $icon-size-xs-y;
+  }
+
+  &-xl {
+    width: $icon-size-xl-x;
+    height: $icon-size-xl-y;
+  }
+
+  &-lg {
+    width: $icon-size-lg-x;
+    height: $icon-size-lg-y;
+  }
+
+  &-md {
+    width: $icon-size-md-x;
+    height: $icon-size-md-y;
+  }
+
+  &-top {
+    width: $icon-size-top-x;
+    height: $icon-size-top-y;
+  }
+
+  &-sm {
+    width: $icon-size-sm-x;
+    height: $icon-size-sm-y;
+  }
+
+  &-round {
+    border-radius: 50%;
+  }
+
+  &-home {
+    width: $icon-size-top-x;
+    height: $icon-size-top-y;
+    background-image: url("@/assets/icons/home.svg");
+  }
+
+  &-rupp {
+    width: 56px;
+    height: 56px;
+    background-image: url("@/assets/icons/rupp.svg");
+  }
+
+  &-fe-white {
+    width: 56px;
+    height: 56px;
+    background-image: url("@/assets/icons/fe-white.svg");
+  }
+
+  &-ite-logo {
+    width: 91px;
+    height: 48px;
+    background-image: url("@/assets/icons/ite-white.svg");
+  }
+
+  &-ite-alumni {
+    width: 206px;
+    height: 86px;
+    background-image: url("@/assets/icons/ite_alumni.svg");
+  }
+
+  &-search {
+    width: 26px;
+    height: 26px;
+    background-image: url("@/assets/icons/search.svg");
+  }
+
+  &-notification-alert {
+    width: 26px;
+    height: 26px;
+    background-image: url("@/assets/icons/notification.svg");
+  }
+
+  &-mail {
+    width: 26px;
+    height: 26px;
+    background-image: url("@/assets/icons/mail.svg");
+  }
+
+  &-call {
+    width: 26px;
+    height: 26px;
+    background-image: url("@/assets/icons/phone.svg");
+  }
+
+  &-location {
+    width: 26px;
+    height: 26px;
+    background-image: url("@/assets/icons/location_marker.svg");
+  }
+
+  &-search-navbar {
+    width: 26px;
+    height: 26px;
+    background-image: url("@/assets/icons/search-navbar.svg");
+  }
+}

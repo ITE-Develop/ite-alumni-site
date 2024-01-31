@@ -1,0 +1,22 @@
+export default function useEnv() {
+  const {
+    VITE_DEV_SERVER_URL,
+    VITE_DEV_SERVER_PORT,
+    VITE_DEV_SERVER_CLIENT_PORT,
+    VITE_TITLE,
+    VITE_API_BASE_URL,
+    VITE_LOCALE,
+    VITE_API_ACCESS_KEY
+  } = import.meta.env;
+
+  return {
+    APP_PREFIX: "ivt",
+    APP_TITLE: VITE_TITLE || 'Softbank Disaster Prevention Line',
+    APP_LOCALE: VITE_LOCALE || 'ja',
+    APP_API_URL: VITE_API_BASE_URL,
+    APP_API_ACESS_KEY: VITE_API_ACCESS_KEY,
+    DEV_SERVER_URL: VITE_DEV_SERVER_URL,
+    DEV_SERVER_PORT: VITE_DEV_SERVER_PORT,
+    DEV_SERVER_CLIENT_PORT: VITE_DEV_SERVER_CLIENT_PORT,
+  }
+}

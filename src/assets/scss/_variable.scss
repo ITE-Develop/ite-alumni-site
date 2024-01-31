@@ -1,0 +1,130 @@
+// Bootstrap Variables
+$primary: #014164;
+$secondary: #E93131;
+$success: #007A54;
+$danger: #dc3545;
+$dark: #1d1d1d;
+
+$light: #ffffff;
+$info: #00b4ff;
+$warning: #F8E40E;
+$blue: #1b6ef3;
+$dark-blue: #004AB9;
+// $gradient: linear-gradient(180deg, rgba(#fff, 0.35), rgba(#000, 0.15));
+
+$body-color: #1B1B1B;
+$border-color: #cccccc;
+$bg-color: #f7f7f7;
+
+$stop-color: #D5433D;
+$delay-color: #AB6700;
+$normal-color: #2C74E0;
+$danger-color : #85487F;
+
+/** Sass Options **/
+$enable-rounded: true;
+$enable-caret: false;
+$enable-shadows: true;
+$enable-gradients: false;
+$enable-negative-margins: true;
+
+/** Typography **/
+$font-family-base: "Hiragino Kaku Gothic Pro";
+$font-weight-normal: 300;
+$font-weight-bold: 600;
+
+$line-height-base:            1.5;
+$line-height-sm:              1.25;
+$line-height-lg:              27px;
+$line-height-xl:              2;
+
+$body-line-height: $line-height-base;
+
+$font-size-base:              0.875rem;
+
+$h1-font-size:                24px;
+$h2-font-size:                18px;
+$h3-font-size:                16px;
+$bold-font-size:              14px;
+$normal-font-size:            14px;
+$caption-font-size:           12px;
+
+//Text Color
+$text-color-primary: #1B1B1B;
+$text-color-secondary: #5E5E5E;
+$text-color-reverse: #FFFFFF;
+$text-color-link: #3A7ABA;
+
+$filterBlue: invert(49%) sepia(13%) saturate(2583%) hue-rotate(169deg) brightness(85%) contrast(83%);
+$filterWhite: invert(100%) sepia(0%) saturate(7492%) hue-rotate(239deg) brightness(113%) contrast(96%);
+
+/** Modal **/
+$modal-header-border-width: 0;
+$modal-footer-border-width: 0;
+
+
+$offcanvas-padding-y:               0;
+$offcanvas-box-shadow: 0px 2px 8px 0px #00000029;
+
+//padding or margin
+$BasicLarge: 32px;
+$BasicRegular: 16px;
+$BasicSmall: 8px;
+$BasicXSmall: 4px;
+
+//border radius
+$border-radius-small: 2px;
+$border-radius: 4px;
+$border-radius-large: 8px;
+$border-radius-xlarge: 16px;
+$border-radius-md: 30px;
+$border-radius-xxlarge: 48px;
+
+//Fill Color
+$fill-color-primary: #3A7ABA;
+$fill-color-secondary: #5E5E5E;
+$fill-color-light: #ffffff;
+$fill-color-dark: #1B1B1B;
+$fill-color-disable: #E2E2E2;
+$fill-color-Cover-Overlay: rgba(27, 27, 27, 0.30) ;
+
+//Icon Color
+$icon-color-primary: #3A7ABA;
+$icon-color-secondary: #FFFFFF;
+$icon-color-tertiary: #5E5E5E;
+$icon-color-disable: #E2E2E2;
+$icon-color-icon-shelter: #3C8554;
+
+//Button Color
+$button-color-primary: #3A7ABA;
+$button-color-secondary: rgba(255, 255, 255, 0.95);
+$button-color-tertiary: #E2E2E2;
+
+//Border Color
+$border-color-primary: #E2E2E2;
+$border-color-secondary: #C8E2EA;
+
+//Gradient color
+$light-gradient: linear-gradient(to right, #FFFFFF, #EFF4F9);
+$blue-gradient: linear-gradient(to right, #3DB8CB, #3D87CB);
+$offcanvas-body-gradient: linear-gradient(270deg, #EFF4F9 0%, #FFF 100%);
+
+//box-shadow
+$box-shadow-primary: 0 1px 2px 0 rgba(0, 98, 128, 0.32);
+
+.background--normal{background-color: #2C74E0;}
+.background--danger{background-color: #85487F;}
+
+$bg-grey: rgba(241, 241, 241, 0.95);
+
+
+//opacity
+$opacity-backdrop: 0.4;
+
+$form-check-input-bg: transparent;
+$form-check-input-border-radius: 3px;
+$form-check-input-width: 1.5em;
+$form-check-input-border: 2px solid #3A7ABA;
+$form-check-input-focus-border: 2px solid #3A7ABA;
+$form-check-input-focus-box-shadow: none;
+$form-check-input-checked-bg-image: url("@/assets/icons/check.svg");

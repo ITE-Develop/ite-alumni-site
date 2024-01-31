@@ -1,0 +1,41 @@
+@mixin icon_base() {
+  display: inline-block;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -0.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin shadow_base() {
+  box-shadow: 0 0.3125rem 0.9375rem rgba($color: #000, $alpha: 0.2),
+    0 0.1875rem 0.375rem rgba($color: #000, $alpha: 0.2);
+}
+
+@import "mixins/sizing";
+@import "mixins/scrollbar";
+@import "mixins/user-select";
+
+@keyframes animateDelayVisible {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  90% {
+    display: none;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+@mixin delay_visible($time: 0.2s) {
+  animation: animateDelayVisible $time linear;
+}
