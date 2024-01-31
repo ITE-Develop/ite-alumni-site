@@ -30,7 +30,7 @@ npm run build
 To run a remote virtual server, Please run the setup the configuration in `.env`:
 ```
 # DEV SERVER
-VITE_DEV_SERVER_URL="http://softbankdpline.com"
+VITE_DEV_SERVER_URL="http://............."
 VITE_DEV_SERVER_PORT="8080"
 VITE_DEV_SERVER_CLIENT_PORT="80"
 ```
