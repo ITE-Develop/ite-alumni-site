@@ -80,12 +80,12 @@
     background-color: $light !important;
 
     .mapboxgl-ctrl-icon {
-      background-image: url("@/assets/icons/navigation-active.svg") !important;
+      //background-image: url("@/assets/icons/navigation-active.svg") !important;
     }
 
     &:disabled {
       .mapboxgl-ctrl-icon {
-        background-image: url("@/assets/icons/navigation.svg") !important;
+        //background-image: url("@/assets/icons/navigation.svg") !important;
       }
     }
 
@@ -95,7 +95,7 @@
       background-color: $light !important;
 
       .mapboxgl-ctrl-icon {
-        background-image: url("@/assets/icons/navigation-active.svg") !important;
+        //background-image: url("@/assets/icons/navigation-active.svg") !important;
       }
     }
   }
