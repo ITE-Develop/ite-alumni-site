@@ -1,0 +1,206 @@
+.container {
+  width: 100vw;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.top-navbar {
+  padding: 14px 100px 14px 100px;
+  align-items: center;
+  gap: 10px;
+  background: #014164;
+}
+
+.col-md-2.logo {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 100%; /* Optional: Set a specific height if needed */
+}
+
+.call-phone {
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.call {
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.phone-number {
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.contact {
+  display: flex;
+  align-items: flex-end;
+  gap: 70px;
+}
+
+.second-navbar {
+  justify-content: center;
+  border-top: 2px solid #FFF;
+  width: 100vw;
+
+  &-content {
+    background-color: #014164;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 0 50px 0 50px;
+    width: 85vw;
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.left-round {
+  position: relative;
+  background-color: #014164;
+  height: 40px;
+  width: 40px;
+  padding: 0;
+
+  &-border {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top-right-radius: 20px;
+    background-color: $bg-color;
+    height: 40px;
+    width: 100vw;
+  }
+}
+
+
+.right-round {
+  position: relative;
+  background-color: #014164;
+  height: 40px;
+  width: 40px;
+  padding: 0;
+
+  &-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 20px;
+    background-color: $bg-color;
+    height: 40px;
+    width: 100vw;
+  }
+}
+
+
+.btn-navbar {
+  gap: 50px;
+  height: 40px;
+  align-items: center;
+
+  &-content {
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}
+
+.search {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active {
+  border-bottom: 2px solid #FFF;
+}
+
+
+//responsive design for navbar
+@media screen and (max-width: 768px) {
+    .contact {
+        flex-direction: column;
+        align-items: flex-start;
+
+        > .mb-3 {
+            margin-bottom: 20px;
+        }
+
+        .d-flex {
+            align-items: flex-start;
+            gap: 10px;
+
+            .call-phone {
+                flex-direction: column;
+                align-items: flex-start;
+
+                .call, .phone-number {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+//responsive design for navbar under 1024px
+@media screen and (max-width: 1024px) {
+    .top-navbar {
+        padding: 14px 50px 14px 50px;
+    }
+
+    .second-navbar-content {
+        padding: 0 20px 0 20px;
+    }
+
+  .contact {
+    gap: 20px;
+  }
+
+    .call-phone {
+        gap: 10px;
+    }
+
+    .btn-navbar {
+        gap: 20px;
+    }
+
+    .search {
+        width: 20px;
+        height: 20px;
+    }
+
+    .call, .phone-number {
+        font-size: 12px;
+    }
+
+    .btn-navbar-content {
+        font-size: 16px;
+    }
+
+    .logo {
+        img {
+            width: 100px;
+        }
+    }
+
+    .left-round, .right-round {
+        height: 30px;
+        width: 30px;
+    }
+
+    .left-round-border, .right-round-border {
+        height: 30px;
+    }
+}
+

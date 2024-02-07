@@ -82,18 +82,19 @@
   &-fe-white {
     width: 56px;
     height: 56px;
+    //filter: invert(1);
     background-image: url("@/assets/icons/fe-white.svg");
   }
 
   &-ite-logo {
-    width: 91px;
-    height: 48px;
+    //width: 91px;
+    //height: 48px;
     background-image: url("@/assets/icons/ite-white.svg");
   }
 
   &-ite-alumni {
-    width: 206px;
-    height: 86px;
+    width: 150px;
+    height: 60px;
     background-image: url("@/assets/icons/ite_alumni.svg");
   }
 

@@ -18,3 +18,4 @@ export { default as SbTwitterPost } from './Twitter.vue';
 
 export { default as SideBar } from './SideBar.vue';
 export { default as TopNavbar } from './TopNarbar.vue';
+export { default as SecondNavbar } from './SecondNavbar.vue';

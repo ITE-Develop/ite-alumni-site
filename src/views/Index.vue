@@ -21,7 +21,7 @@ const prefix = ENV.APP_PREFIX;
 const classWrapper = {
   [`${prefix}-top-wrapper`]: true,
 };
-console.log(prefix)
+
 const state = reactive({
   train: [],
   twitter: [],
