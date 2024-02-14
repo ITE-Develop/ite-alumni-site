@@ -55,7 +55,7 @@ onMounted(() => {
       <div type="button" class="btn-close h1 text-reset" data-bs-dismiss="offcanvas" aria-label="Close">×</div>
     </div>
     <div class="offcanvas-body">
-      <div class="d-flex flex-column gap-5 align-items-center">
+      <div class="d-flex flex-column gap-4 align-items-center">
         <div v-for="item in menu" :key="item.name"
              :class="{ 'active': item.link === currentRoute }" class="top-text-offcanvas">{{ item.name }}
         </div>

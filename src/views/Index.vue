@@ -12,7 +12,9 @@ import Top from "@/views/pages/Top.vue";
 import {useLecturerRandom, useRef} from "@/stores/index.js";
 const { TopRef } = useRef();
 
-const {setTitle} = useMetaTag();
+const {setTitle, setMetaTags} = useMetaTag();
+
+
 
 const {t} = useI18n();
 
@@ -24,11 +26,14 @@ const classWrapper = {
 };
 
 
-setTitle("ITE Alumni");
-
-//handle scroll event of wrapper class
-
-
+setTitle("ITE G7 Alumni");
+setMetaTags({
+  'og:title': 'ITE G7 Alumni',
+  'og:description': 'ITE G7 Alumni For All ITE G7 Students and Alumni to connect and share their experiences and knowledge.',
+  'og:image': 'https://ite.decapsoul.one/ite-f711fe9c.min.svg',
+  'telegram:title': 'ITE G7 Alumni',
+  'telegram:description': 'ITE G7 Alumni For All ITE G7 Students and Alumni to connect and share their experiences and knowledge.',
+});
 </script>
 
 <template>
