@@ -127,3 +127,7 @@ $form-check-input-width: 1.5em;
 $form-check-input-border: 2px solid #3A7ABA;
 $form-check-input-focus-border: 2px solid #3A7ABA;
 $form-check-input-focus-box-shadow: none;
+
+//import font and set global font Poppins
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+$font-family: 'Poppins', sans-serif;

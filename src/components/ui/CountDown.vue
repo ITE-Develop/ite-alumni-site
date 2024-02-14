@@ -59,7 +59,6 @@ onUnmounted(() => clearInterval(refreshInterval));
             <i class="ite-icon "></i>
           </div>
           <div class="d-flex area-text-2 mt-4 justify-content-between">
-
             <div class="d-flex flex-column">
               <img :src="data?.photo" alt="" class="image-lecturer"/>
               <div class="d-flex flex-column title px-4 py-2">
@@ -143,15 +142,14 @@ onUnmounted(() => clearInterval(refreshInterval));
             <div class="h2 fw-bold">Categories</div>
             <div>View All</div>
           </div>
-
         </div>
-
       </div>
     </div>
 </template>
 <style lang="scss" scoped>
 @import "@/assets/scss/theme/default/_top.scss";
 .top-category{
+  font-family: $font-family;
   background-color: #014164;
   border-radius: 5px;
   color: #fff;
@@ -159,6 +157,7 @@ onUnmounted(() => clearInterval(refreshInterval));
   padding: 10px;
 }
 .bottom-category{
+  font-family: $font-family;
   background-color: #014164;
   border-radius: 5px;
   color: #fff;
@@ -183,7 +182,7 @@ onUnmounted(() => clearInterval(refreshInterval));
 }
 
 .countable{
-  width: 43%;
+  width: 50%;
 }
 
 .hide-on-mobile{

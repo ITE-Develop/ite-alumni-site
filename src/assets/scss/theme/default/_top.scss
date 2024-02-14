@@ -17,22 +17,26 @@
 }
 
 .academic{
+  font-family: 'Poppins', sans-serif;
   font-size: 20px;
   font-weight: 600;
   color: #000;
 }
 .name-lecturer{
+  font-family: $font-family;
   font-size: 14px;
   font-weight: 600;
   color: #000;
 }
 .title-lecturer{
+  font-family: $font-family;
   font-size: 14px;
   font-weight: 300;
   color: #000;
 }
 
 .share-btn {
+  font-family: $font-family;
   width: 46%;
   background-color: #C4C4C4;
   border-radius: 10px;
@@ -46,6 +50,7 @@
 }
 
 .view-more-btn {
+  font-family: $font-family;
   width: 46%;
   border-radius: 10px;
   text-align: center;
@@ -64,6 +69,7 @@
   color: #000;
 }
 .total-projects{
+  font-family: $font-family;
   padding: 10px;
   margin-top: 10px;
   font-size: 14px;
@@ -76,41 +82,49 @@
   color: #000;
 }
 .day-count{
+  font-family: $font-family;
   font-size: 24px;
   font-weight: 300;
   color: #000;
 }
 .days{
+  font-family: $font-family;
   font-size: 14px;
   font-weight: normal;
   color: #000;
 }
 .month-count{
+  font-family: $font-family;
   font-size: 24px;
   font-weight: 300;
   color: #000;
 }
 .months{
+  font-family: $font-family;
   font-size: 14px;
   font-weight: normal;
   color: #000;
 }
 .total{
+  font-family: $font-family;
   font-size: 14px;
   font-weight: normal;
   color: #000;
 }
 .total-students{
+  font-family: $font-family;
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 600;
   color: #000;
 }
 .students{
+  font-family: $font-family;
   font-size: 14px;
   font-weight: normal;
   color: #000;
 }
 .ug{
+  font-family: $font-family;
   font-size: 16px;
   font-weight: bold;
   color: #000;
@@ -128,6 +142,7 @@
 }
 
 .countdown{
+  font-family: 'Poppins', sans-serif;
   font-size: 24px;
   font-weight: bold;
   color: #000;

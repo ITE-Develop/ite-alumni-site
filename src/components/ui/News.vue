@@ -2,40 +2,46 @@
 
 const newsItems = [
   {
+    category: "Category 1",
     title: "TITLE OF NEWS 1",
     timestamp: "10 / 01 / 2023",
     description: "Description ewzxcscz New Articrtic ,Newzxcc ,Newzxcscz New Ar Description ewzxcscz New Articrtic ,Newzxcc ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz",
-    image: "https://via.placeholder.com/332x168.png/00aaaa?text=amet"
+    image: "https://res.cloudinary.com/zerovector/image/upload/v1707731744/rinqwxiiabzhwvinrne2.jpg"
   },
   {
+    category: "Category 1",
     title: "TITLE OF NEWS 1",
     timestamp: "10 / 01 / 2023",
     description: "Description ewzxcscz New Articrtic ,Newzxcc ,Newzxcscz New Ar Description ewzxcscz New Articrtic ,Newzxcc ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz",
-    image: "https://via.placeholder.com/332x168.png/00aaaa?text=amet"
+    image: "https://res.cloudinary.com/zerovector/image/upload/v1707731704/ondtmtzyasxnsmezqkgc.jpg"
   },
   {
+    category: "Category 1",
     title: "TITLE OF NEWS 1",
     timestamp: "10 / 01 / 2023",
     description: "Description ewzxcscz New Articrtic ,Newzxcc ,Newzxcscz New Ar Description ewzxcscz New Articrtic ,Newzxcc ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz",
-    image: "https://via.placeholder.com/332x168.png/00aaaa?text=amet"
+    image: "https://res.cloudinary.com/zerovector/image/upload/v1707731610/avzhsqx6u4nykdlovqwo.jpg"
   },
   {
+    category: "Category 1",
     title: "TITLE OF NEWS 1",
     timestamp: "10 / 01 / 2023",
     description: "Description ewzxcscz New Articrtic ,Newzxcc ,Newzxcscz New Ar Description ewzxcscz New Articrtic ,Newzxcc ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz",
-    image: "https://via.placeholder.com/332x168.png/00aaaa?text=amet"
+    image: "https://res.cloudinary.com/zerovector/image/upload/v1707731744/wb7zvmzhezxkw3z2rx2t.jpg"
   },
-    {
+  {
+    category: "Category 1",
     title: "TITLE OF NEWS 1",
     timestamp: "10 / 01 / 2023",
     description: "Description ewzxcscz New Articrtic ,Newzxcc ,Newzxcscz New Ar Description ewzxcscz New Articrtic ,Newzxcc ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz",
-    image: "https://via.placeholder.com/332x168.png/00aaaa?text=amet"
+    image: "https://res.cloudinary.com/zerovector/image/upload/v1707362449/btp3l1qacuguemu6lrjm.png"
   },
-    {
+  {
+    category: "Category 1",
     title: "TITLE OF NEWS 1",
     timestamp: "10 / 01 / 2023",
     description: "Description ewzxcscz New Articrtic ,Newzxcc ,Newzxcscz New Ar Description ewzxcscz New Articrtic ,Newzxcc ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz",
-    image: "https://via.placeholder.com/332x168.png/00aaaa?text=amet"
+    image: "https://app.netlify.com/.netlify/images?url=https://d33wubrfki0l68.cloudfront.net/621e37005b568137419b75f7/6a45b4fc83d050dab7fb/sticker.png&h=416&w=416"
   },
   // Add more news items as needed
 ]
@@ -52,6 +58,7 @@ const newsItems = [
       <div v-for="(item, index) in newsItems" :key="index" class="col-md-2">
         <div class="news-card d-flex flex-column">
           <div class="news-content-wrapper">
+            <div class="category-header">{{ item.category }}</div>
             <div class="d-flex">
               <img :alt="item.title" :src="item.image" class="news-image">
             </div>
@@ -72,12 +79,14 @@ const newsItems = [
 
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .news-content-wrapper {
   flex-grow: 1;
   padding: 20px;
 }
-.view-more-btn{
+
+.view-more-btn {
+  font-family: $font-family;
   margin-top: 15px;
   font-size: 14px;
   color: #FF6B00;
@@ -87,11 +96,14 @@ const newsItems = [
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s;
-  &:hover{
+
+  &:hover {
+    font-family: $font-family;
     background-color: #FF6B00;
     color: #fff;
   }
 }
+
 .description {
   font-size: 12px;
   color: #000;
@@ -106,31 +118,41 @@ const newsItems = [
 }
 
 
-.timestamp{
+.timestamp {
   font-size: 14px;
   color: #FF6B00;
 }
-.title-news{
+
+.title-news {
   font-size: 16px;
   font-weight: 600;
   color: #FF6B00;
 
 }
+
 .news-content {
   margin-right: auto;
 }
 
-.category {
-  writing-mode: vertical-lr;
-  transform: rotate(180deg);
+.category-header {
+  font-size: 14px;
+  font-weight: 600;
+  color: #FF6B00;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
 }
-.news-image{
+
+.news-image {
   width: 100%;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 10px;
+  height: 200px;
 }
-.news-card{
+
+.news-card {
   background-color: #fff;
   margin: 20px 0;
   border-radius: 10px;
@@ -144,16 +166,20 @@ const newsItems = [
   cursor: pointer;
   transition: all 0.3s;
 }
-.container{
+
+.container {
+  font-family: $font-family;
   margin: 40px 85px 0;
 }
-.title{
+
+.title {
   display: flex;
   align-items: center;
   font-size: 20px;
   font-weight: 600;
 }
-.see-more{
+
+.see-more {
   font-size: 16px;
   color: #FF6B00;
   background-color: #fff;

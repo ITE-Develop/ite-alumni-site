@@ -1,18 +1,32 @@
+//
+//@font-face {
+//  font-family: "Poppins";
+//  font-weight: 300;
+//  font-display: swap;
+//  src:
+//    local('Poppins'),
+//    url("@fonts/poppins/Poppins-Light.ttf") format("truetype");
+//}
+//@font-face {
+//  font-family: "Poppins";
+//  font-weight: 600;
+//  font-display: swap;
+//  src:
+//    local('Poppins'),
+//    url("@fonts/poppins/Poppins-SemiBold.ttf") format("truetype") ;
+//}
 
+//use cdn google font imports font-face in scss
 @font-face {
-  font-family: "Poppins";
-  font-weight: 300;
-  font-display: swap;
-  src:
-    local('Poppins'),
-    url("@fonts/poppins/Poppins-Light.ttf");
+    font-family: "Poppins";
+    font-weight: 300;
+    font-display: swap;
+    src: url("https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLGT9Z1xlFd2JQEk.woff2") format("woff2");
 }
+
 @font-face {
   font-family: "Poppins";
   font-weight: 600;
   font-display: swap;
-  src:
-    local('Poppins'),
-    url("@fonts/poppins/Poppins-SemiBold.ttf");
+  src: url("https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLGT9Z1xlFd2SVKf6.woff2") format("woff2");
 }
-
