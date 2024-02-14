@@ -1,3 +1,4 @@
+/*
 import {defineStore} from 'pinia';
 import {computed, ref} from 'vue';
 import DenseService from "@/services/DenseService.js";
@@ -14,3 +15,4 @@ export const useDenseStore = defineStore('Dense', () => {
     all
   }
 });
+*/

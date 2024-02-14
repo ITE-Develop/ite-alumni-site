@@ -1,53 +1,61 @@
+<script setup>
+import {onBeforeMount, onMounted, ref} from 'vue';
+const menu = [
+  { name: "Home", link: "/" },
+  { name: "Student", link: "/student" },
+  {name: "Lecturer", link: "/lecturer"},
+  {name: "News", link: "/news"},
+  {name: "Article", link: "/article"},
+  {name: "About", link: "/about"},
+  {name: "Contacts", link: "/contacts"},
+];
+let isScrolling = false;
+let lastScrollTop = 0;
+
+const handleScroll = () => {
+  console.log('scrolling')
+  const st = window.pageYOffset || document.documentElement.scrollTop;
+  if (st > lastScrollTop) {
+    isScrolling = false;
+  } else {
+    isScrolling = true;
+  }
+  lastScrollTop = st <= 0 ? 0 : st;
+};
+
+const currentRoute = ref(window.location.pathname);
+
+onBeforeMount(() => {
+window.removeEventListener('scroll', handleScroll);
+});
+
+onMounted(() => {
+   window.addEventListener('scroll', handleScroll);
+});
+</script>
+
 <template>
-  <div class="container">
-    <div class="d-flex top-navbar justify-content-between">
-      <div class="col-md-2 logo">
-        <i class="ite-icon ite-icon-ite-alumni"/>
-      </div>
-      <div class="contact d-flex">
-        <div class="d-flex">
-          <i class="ite-icon ite-icon-call me-3"/>
-          <div class="d-flex flex-column call-phone">
-            <div class="call">Call</div>
-            <div class="phone-number">096 328 499 5</div>
-          </div>
-        </div>
-        <div class="d-flex">
-          <i class="ite-icon ite-icon-mail me-3"/>
-          <div class="d-flex flex-column call-phone">
-            <div class="call">Email</div>
-            <div class="phone-number">fe.info@rupp.edu.kh</div>
-          </div>
-        </div>
-        <div class="d-flex">
-          <i class="ite-icon ite-icon-location me-3"/>
-          <div class="d-flex flex-column call-phone">
-            <div class="call">Address</div>
-            <div class="phone-number">Toul Kork, Phnom Penh</div>
-          </div>
-        </div>
+  <nav  class="top-navbar" :class="{ 'top-navbar-scrolling': isScrolling }">
+    <i class="ite-icon ite-icon-ite-alumni"></i>
+    <div class="d-flex gap-5 align-items-center">
+      <div v-for="item in menu" :key="item.name"
+           :class="{ 'active': item.link === currentRoute }" class="top-text">{{ item.name }}</div>
+      <div class="top-menu d-flex align-items-center gap-2" data-bs-toggle="offcanvas"
+           href="#offcanvasDrawer" role="button" aria-controls="offcanvasDrawer">
+        <div class="top-menu-text">Menu</div>
+        <i class="ite-icon ite-icon-menu"></i>
       </div>
     </div>
-    <div class="row second-navbar">
-      <div class="left-round">
-        <div class="left-round-border"/>
-      </div>
-      <div class="second-navbar-content justify-content-between">
-        <div class="d-flex btn-navbar">
-          <div class="btn-navbar-content active">Home</div>
-          <div class="btn-navbar-content">Student</div>
-          <div class="btn-navbar-content">Lecturer</div>
-          <div class="btn-navbar-content">News</div>
-          <div class="btn-navbar-content">Article</div>
-          <div class="btn-navbar-content">About</div>
-          <div class="btn-navbar-content">Contacts</div>
-        </div>
-        <div class="bg-white rounded-4 search">
-          <i class="ite-icon ite-icon-search-navbar mx-auto"></i>
-        </div>
-      </div>
-      <div class="right-round">
-        <div class="right-round-border"/>
+  </nav>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDrawer" aria-labelledby="offcanvasDrawerLabel">
+    <div class="d-flex justify-content-between p-3">
+      <h5 class="offcanvas-title" id="offcanvasDrawerLabel">Offcanvas</h5>
+      <button type="button" class="btn-close text-reset text-black" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div>
+        Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
       </div>
     </div>
   </div>
@@ -55,4 +63,17 @@
 
 <style lang="scss" scoped>
 @import url("@/assets/scss/components/_navbar.scss");
+.top-navbar-scrolling {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #014164;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
 </style>

@@ -1,3 +1,4 @@
+<!--
 <script setup>
 import { SbDisasterPostList, SbSNSModal } from "@/components/ui/index";
 import { SbSkeletonTwitterList } from "@/components/ui/skeleton/index";
@@ -155,4 +156,4 @@ onMounted(() => {
     }
   }
 }
-</style>
+</style>-->

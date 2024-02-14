@@ -4,52 +4,37 @@ import {SideBar, TopNavbar} from "@/components/ui";
 import {SbSkeletonTrainTop, SbSkeletonTwitterTop} from "@/components/ui/skeleton";
 import {useI18n} from 'vue-i18n';
 import {useMetaTag} from "@/composables";
-import {useTrain, useSNS} from "@/stores";
-import {onMounted, reactive} from "vue";
+// import {useTrain, useSNS} from "@/stores";
+import {onMounted} from "vue";
 
 import ENV from "@/config/env.js";
-import Home from "@/views/pages/Home.vue";
+import Top from "@/views/pages/Top.vue";
+import {useLecturerRandom, useRef} from "@/stores/index.js";
+const { TopRef } = useRef();
 
 const {setTitle} = useMetaTag();
 
 const {t} = useI18n();
 
-const {all: allTrain} = useTrain();
-const {all: allSNS, isLoading: isSNSLoading} = useSNS();
+const {all} = useLecturerRandom();
 
 const prefix = ENV.APP_PREFIX;
 const classWrapper = {
   [`${prefix}-top-wrapper`]: true,
 };
 
-const state = reactive({
-  train: [],
-  twitter: [],
-});
 
-setTitle("ite");
+setTitle("ITE Alumni");
 
-const fetchTrainData = async () => {
-  const trainData = await allTrain();
-  state.train = trainData?.data;
-};
+//handle scroll event of wrapper class
 
-const fetchSNSData = async () => {
-  const snsData = await allSNS({limit: 5});
-  state.twitter = snsData?.data ?? [];
-};
-
-onMounted(() => {
-  fetchTrainData();
-  fetchSNSData();
-});
 
 </script>
 
 <template>
   <main :class="classWrapper">
-    <div class="wrapper">
-      <Home/>
+    <div class="wrapper" id="wrapper">
+      <Top ref="TopRef"/>
     </div>
   </main>
 </template>
@@ -57,4 +42,11 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 @import "@/assets/scss/theme/default/_top.scss";
+.top-navbar {
+  transition: transform 0.3s ease-in-out;
+}
+
+.scrolled {
+  transform: translateY(-100%);
+}
 </style>

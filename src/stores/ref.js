@@ -10,6 +10,7 @@ export const useRefStore = defineStore('store-ref', () => {
   const helperRef = ref();
   const settingRef = ref();
   const cookieoffcanvasRef = ref();
+  const TopRef = ref();
 
   return {
     mapRef: computed(() => mapRef),
@@ -19,5 +20,6 @@ export const useRefStore = defineStore('store-ref', () => {
     helperRef: computed(() => helperRef),
     settingRef: computed(() => settingRef),
     cookieoffcanvasRef: computed(() => cookieoffcanvasRef),
+    TopRef: computed(() => TopRef),
   }
 });

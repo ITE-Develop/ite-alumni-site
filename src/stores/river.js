@@ -1,3 +1,4 @@
+/*
 import {defineStore} from 'pinia';
 import RiverService from '@/services/RiverService';
 
@@ -12,3 +13,4 @@ export const useRiverStore = defineStore('river', () => {
     all
   }
 });
+*/

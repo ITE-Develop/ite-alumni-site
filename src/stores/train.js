@@ -1,3 +1,4 @@
+/*
 import {defineStore} from 'pinia';
 import TrainService from '@/services/TrainService';
 
@@ -12,3 +13,4 @@ export const useTrainStore = defineStore('train', () => {
     all
   }
 });
+*/

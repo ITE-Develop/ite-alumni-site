@@ -1,3 +1,4 @@
+<!--
 <script setup>
 
 import { SbTrainStatus, SbTwitterPost, SbDisasterPrevention, SbDisasterInformation } from "@/components/ui";
@@ -111,3 +112,4 @@ onMounted(() => {
 <style lang="scss" scoped>
 @import "@/assets/scss/theme/default/_top.scss";
 </style>
+-->

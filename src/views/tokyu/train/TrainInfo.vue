@@ -1,3 +1,4 @@
+<!--
 
 <script setup>
 import { SbTrainInfo } from "@/components/ui";
@@ -103,3 +104,4 @@ const classWrapper = {
   }
 }
 </style>
+-->

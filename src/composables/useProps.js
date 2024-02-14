@@ -178,3 +178,7 @@ export const makeCookieOffcanvasProps = () => ({
 export const makeLegendProps = () => ({
   id: { type: String, default: ENV.APP_PREFIX + "-legend" },
 });
+
+export const makeTopProps = () => ({
+  id: { type: String, default: ENV.APP_PREFIX + "-top" },
+});

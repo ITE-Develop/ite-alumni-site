@@ -15,5 +15,4 @@ const app = createApp(App)
   .use(router)
   .use(VueCookies);
 
-
 export default app.mount("body");

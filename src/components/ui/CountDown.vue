@@ -1,182 +1,198 @@
 <script setup>
+import { useLecturerControl } from "@/composables/index.js";
+import { onMounted, onUnmounted, reactive } from "vue";
 
+const { setup, countdown } = useLecturerControl();
+
+const data = reactive({
+  name: "waiting for data...",
+  photo: "https://via.placeholder.com/332x168.png/00aaaa?text=amet",
+  months: 0,
+  days: 0,
+  hours: 0,
+  minutes: 0,
+  seconds: 0,
+});
+
+const refreshData = async () => {
+  try {
+    const { data: responseData } = await setup();
+    Object.assign(data, responseData);
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+};
+
+const refreshCountdown = () => {
+  const { months, days, hours, minutes, seconds } = countdown();
+  Object.assign(data, { months, days, hours, minutes, seconds });
+};
+
+onMounted(async () => {
+  await refreshData();
+  refreshCountdown();
+  setInterval(refreshCountdown, 1000);
+});
+
+const refreshInterval = setInterval(refreshData, 5000);
+
+onUnmounted(() => clearInterval(refreshInterval));
 </script>
 
 <template>
-  <div class="container d-flex">
+    <div class="container mt-5">
+      <div class="d-flex carousel">
+        <div class="d-flex banner">
+          <img :src="data?.photo" alt="" class="banner-image"/>
+        </div>
+        <div class="d-flex flex-column countable">
+          <div class="d-flex justify-content-between area-text">
+            <div class="d-flex">
+              <i class="ite-icon "></i>
+              <i class="ite-icon  ms-2"></i>
+            </div>
 
-    <div class="d-flex flex-column ">
-      <img alt="" class="image" src="https://scontent.fpnh10-1.fna.fbcdn.net/v/t39.30808-1/349309788_6561977050514350_2535667464264474448_n.jpg?stp=dst-jpg_s200x200&_nc_cat=107&ccb=1-7&_nc_sid=5740b7&_nc_eui2=AeH5wn5CaL-hAmlv9pmJbdBERkuPd29bcwNGS493b1tzA5iSc_pWnMYJO0SWD1eRi2lR6UVMcojkhfqy3pbn_EiA&_nc_ohc=d0X_VGqiFKAAX8rwt0h&_nc_ht=scontent.fpnh10-1.fna&oh=00_AfDEE9TUGxvApzfogplJ1GsFacqV2VS88AT5kY4tdHJaFA&oe=65B5B97D">
-      <div class="detail">
-        <div>Lecturer</div>
-        <div class="name">Mr. OUK KEO Vichear</div>
-      </div>
-    </div>
-
-    <div class="d-flex flex-column ms-2">
-      <div class="countdown">Graduation Countdown</div>
-      <div class="horizontal-bar mt-2"/>
-      <div class="countdown-date">
-        <div class="d-flex justify-content-between">
-          <div class="d-flex flex-column">
-            <div class="countdown-date-h1">Total</div>
-            <div class="countdown-date-blue">200</div>
-            <div class="countdown-date-footer">Students</div>
+            <div class="d-flex flex-column text-center academic">
+              <div>Academic Year 2020-2024</div>
+              <div>Generation 7 Alumni</div>
+            </div>
+            <i class="ite-icon "></i>
           </div>
-          <div class="vertical-bar mx-4"/>
-          <div class="d-flex flex-column align-items-center ">
-            <div class="countdown-date-h1">Upcoming Graduation</div>
-            <div class="d-flex gap-4">
-              <div class="d-flex flex-column">
-                <div class="countdown-date-blue">96</div>
-                <div class="countdown-date-footer">Months</div>
-              </div>
-              <div class="d-flex flex-column countdown-date-divide">:</div>
-              <div class="d-flex flex-column">
-                <div class="countdown-date-blue">96</div>
-                <div class="countdown-date-footer">Days</div>
+          <div class="d-flex area-text-2 mt-4 justify-content-between">
+
+            <div class="d-flex flex-column">
+              <img :src="data?.photo" alt="" class="image-lecturer"/>
+              <div class="d-flex flex-column title px-4 py-2">
+                <div class="title-lecturer">Lecturer</div>
+                <div class="name-lecturer">{{ data?.name }}</div>
               </div>
             </div>
 
+            <div class="d-flex flex-column countdown-section">
+              <div class="countdown-area d-flex flex-column align-items-center">
+                <div class="countdown text-center">Graduation Countdown</div>
+                <div class="horizontal-bar"/>
+                <div class="d-flex justify-content-between w-85 py-2 px-3 number-count mt-2">
+                  <div class="d-flex flex-column justify-content-center me-3">
+                    <div class="total">Total</div>
+                    <div class="total-students my-2">196</div>
+                    <div class="students">Students</div>
+                  </div>
+                  <div class="vertical-line"/>
+                  <div class="d-flex flex-column justify-content-center mx-2">
+                    <div class="ug text-center">Upcoming Graduation</div>
+                    <div class="d-flex mt-2">
+                      <div class="d-flex months">
+                        <div class="d-flex flex-column text-center">
+                          <div class="month-count">{{ data.months ? data.months : 0 }}</div>
+                          <div class="months mt-2">Months</div>
+                        </div>
+                      </div>
+                      <div class="d-flex days">
+                        <div class="mx-2 divide">:</div>
+                        <div class="d-flex flex-column text-center ">
+                          <div class="day-count">{{ data.days ? data.days : 0 }}</div>
+                          <div class="days mt-2">Days</div>
+                        </div>
+                      </div>
+                      <div class="hours hide-on-mobile">
+                        <div class="mx-2 divide">:</div>
+                        <div class="d-flex flex-column text-center ">
+                          <div class="day-count">{{ data.hours ? data.hours : 0 }}</div>
+                          <div class="days mt-2">Hours</div>
+                        </div>
+                      </div>
+                      <div class="minutes hide-on-mobile">
+                        <div class="mx-2 divide">:</div>
+                        <div class="d-flex flex-column text-center ">
+                          <div class="day-count">{{ data.minutes ? data.minutes : 0 }}</div>
+                          <div class="days mt-2">Minutes</div>
+                        </div>
+                      </div>
+                      <div class="seconds hide-on-mobile">
+                        <div class="mx-2 divide">:</div>
+                        <div class="d-flex flex-column text-center ">
+                          <div class="day-count">{{ data.seconds ? data.seconds : 0 }}</div>
+                          <div class="days mt-2">Seconds</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center text-center justify-content-center total-projects">
+                <div>Total Final Project :</div>
+                <div class="count-project">200</div>
+                <div>Projects</div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between mx-3 mt-3 ">
+            <div class="view-more-btn">View More</div>
+            <div class="share-btn">Share</div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column categories gap-2">
+          <div class="h-50 d-flex justify-content-between top-category">
+            <div class="h2 fw-bold">Categories</div>
+            <div>View All</div>
+          </div>
+
+          <div class="h-50 d-flex justify-content-between bottom-category">
+            <div class="h2 fw-bold">Categories</div>
+            <div>View All</div>
           </div>
 
         </div>
-      </div>
 
-      <div class="d-flex justify-content-between button-group">
-        <button class="btn btn-more">View More</button>
-        <button class="btn btn-share">Share</button>
       </div>
-
     </div>
-
-  </div>
 </template>
-
 <style lang="scss" scoped>
-.button-group {
-  margin-top: 16px;
+@import "@/assets/scss/theme/default/_top.scss";
+.top-category{
+  background-color: #014164;
+  border-radius: 5px;
+  color: #fff;
+  display: flex;
+  padding: 10px;
+}
+.bottom-category{
+  background-color: #014164;
+  border-radius: 5px;
+  color: #fff;
+  display: flex;
+  padding: 10px;
+}
+.category{
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 5px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.categories{
+  width: 25%;
+  height: 475px;
+  border-radius: 10px;
 }
 
-.btn {
-  &-more {
-    width: 147px;
-    height: 50px;
-    flex-shrink: 0;
-    border-radius: 20px;
-    border: 1px solid #014164;
-    color: #014164;
-  }
-
-  &-share {
-    width: 147px;
-    height: 50px;
-    flex-shrink: 0;
-    border-radius: 20px;
-    background: #014164;
-    color: #FFF;
-  }
+.countable{
+  width: 43%;
 }
 
-.vertical-bar {
-  border-left: 2px solid #24252D;
+.hide-on-mobile{
+  display: flex;
 }
+@media (max-width: 1000px) {
+  .hide-on-mobile {
 
-.container {
-  border-radius: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.20);
-  background: #FFF;
-  padding: 10px 16px;
-  align-items: flex-start;
-  gap: 16px;
-}
-
-.image {
-  width: 218px;
-  height: 231px;
-  flex-shrink: 0;
-  background-color: $text-color-secondary;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-  object-fit: cover;
-}
-
-.detail {
-  padding: 14px;
-  height: 70px;
-  flex-shrink: 0;
-  background-color: $bg-grey;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-}
-
-.name {
-  color: #24252D;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: 0.5px;
-}
-
-.countdown {
-  color: #24252D;
-  text-align: center;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: 0.5px;
-
-  &-date {
-    padding: 16px;
-    margin-top: 28px;
-    width: 315px;
-    height: 115px;
-    flex-shrink: 0;
-    border-radius: 20px;
-    background: rgba(241, 241, 241, 0.95);
-    backdrop-filter: blur(2px);
-
-    &-h1 {
-      color: #24252D;
-      text-align: justify;
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 25px; /* 208.333% */
-      letter-spacing: 0.5px;
-    }
-
-    &-blue {
-      color: #014164;
-      text-align: justify;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 25px; /* 138.889% */
-      letter-spacing: 0.5px;
-    }
-
-    &-footer {
-      color: #24252D;
-      text-align: justify;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 25px; /* 178.571% */
-      letter-spacing: 0.5px;
-    }
-
-    &-divide {
-      color: #014164;
-      text-align: justify;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 25px; /* 138.889% */
-      letter-spacing: 0.5px;
-    }
+    display: none;
   }
 }
 </style>

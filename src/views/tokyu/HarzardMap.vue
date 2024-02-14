@@ -1,3 +1,4 @@
+<!--
 <script setup>
 import { SbMap } from "@/components/ui";
 
@@ -55,4 +56,4 @@ const onMapReady = (map) => {
   color:#1b6ef3;
   margin-bottom: $BasicRegular;
 }
-</style>
+</style>-->

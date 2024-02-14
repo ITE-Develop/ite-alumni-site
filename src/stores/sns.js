@@ -1,3 +1,4 @@
+/*
 import { ref, computed } from "vue";
 import { defineStore } from 'pinia';
 import TwitterService from '@/services/TwitterService';
@@ -21,3 +22,4 @@ export const useSNSStore = defineStore('sns', () => {
     all
   }
 });
+*/
