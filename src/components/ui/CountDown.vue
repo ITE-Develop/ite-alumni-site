@@ -47,19 +47,19 @@ onUnmounted(() => clearInterval(refreshInterval));
         </div>
         <div class="d-flex flex-column countable">
           <div class="d-flex justify-content-between area-text">
-            <div class="d-flex">
+            <div class="d-flex brand-icon">
               <i class="ite-icon "></i>
-              <i class="ite-icon  ms-2"></i>
+              <i class="ite-icon ms-2"></i>
             </div>
 
             <div class="d-flex flex-column text-center academic">
               <div>Academic Year 2020-2024</div>
               <div>Generation 7 Alumni</div>
             </div>
-            <i class="ite-icon "></i>
+            <i class="ite-icon brand-icon"></i>
           </div>
           <div class="d-flex area-text-2 mt-4 justify-content-between">
-            <div class="d-flex flex-column">
+            <div class="d-flex flex-column lecturer-show">
               <img :src="data?.photo" alt="" class="image-lecturer"/>
               <div class="d-flex flex-column title px-4 py-2">
                 <div class="title-lecturer">Lecturer</div>
@@ -80,7 +80,7 @@ onUnmounted(() => clearInterval(refreshInterval));
                   <div class="vertical-line"/>
                   <div class="d-flex flex-column justify-content-center mx-2">
                     <div class="ug text-center">Upcoming Graduation</div>
-                    <div class="d-flex mt-2">
+                    <div class="d-flex mt-2 countdown-timestamp">
                       <div class="d-flex months">
                         <div class="d-flex flex-column text-center">
                           <div class="month-count">{{ data.months ? data.months : 0 }}</div>
@@ -126,7 +126,7 @@ onUnmounted(() => clearInterval(refreshInterval));
               </div>
             </div>
           </div>
-          <div class="d-flex justify-content-between mx-3 mt-3 ">
+          <div class="d-flex justify-content-between mx-3 mt-3 view-more-share">
             <div class="view-more-btn">View More</div>
             <div class="share-btn">Share</div>
           </div>
@@ -188,10 +188,359 @@ onUnmounted(() => clearInterval(refreshInterval));
 .hide-on-mobile{
   display: flex;
 }
-@media (max-width: 1000px) {
-  .hide-on-mobile {
 
+@media screen and (max-width: 576px) {
+  .lecturer-show{
+    display: none !important;
+  }
+
+  .area-text-2{
+    flex-direction: column !important;
+  }
+  .total-projects{
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .countdown-timestamp{
+    display: flex;
+    justify-content: center;
+  }
+  .brand-icon{
+    display: none !important;
+  }
+  .categories{
+    display: none !important;
+  }
+  .view-more-share{
+    margin-top: 0 !important;
+  }
+  .total-projects{
+    margin-top: 25px;
+  }
+  .countdown-section{
+    margin-left: 0 !important;
+  }
+
+  .container {
+    margin-top: 0 !important;
+  }
+  .hide-on-mobile{
     display: none;
+  }
+  .categories{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+  }
+  .countable{
+    margin-top: 18px;
+    width: 100%;
+  }
+  .banner{
+    display: none !important;
+    width: 100%;
+  }
+  .countdown-area{
+    width: 100%;
+  }
+  .area-text-2{
+    flex-direction: row;
+  }
+  .area-text{
+    flex-direction: column;
+  }
+  .carousel{
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+  }
+  .top{
+    width: 100%;
+  }
+  .top-navbar-scrolling {
+    position: fixed;
+    width: calc(100% - 40px);
+    z-index: 1000; /* Ensure navbar stays on top of other content */
+  }
+  .scrolled-down {
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
+  }
+  .scrolled-up {
+    transform: translateY(0);
+    transition: all 0.3s ease-in-out;
+  }
+  .top-navbar {
+    transition: transform 0.3s ease-in-out;
+  }
+  .scrolled {
+    transform: translateY(-100%);
+  }
+  .#{$prefix}top-wrapper {
+    display: block;
+  }
+  .#{$prefix}top-wrapper {
+    display: block;
+  }
+  .#{$prefix}top-wrapper {
+    display: block;
+  }
+}
+
+/*@media screen and (min-width: 768px) {
+  .brand-icon{
+    display: none !important;
+  }
+  .categories{
+    display: none !important;
+  }
+  .view-more-share{
+    margin-top: 0 !important;
+  }
+  .total-projects{
+    margin-top: 25px;
+  }
+  .countdown-section{
+    margin-left: 0 !important;
+  }
+  .lecturer-show{
+    display: none !important;
+  }
+  .container {
+    margin-top: 0 !important;
+  }
+  .hide-on-mobile{
+    display: none;
+  }
+  .categories{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+  }
+  .countable{
+    margin-top: 18px;
+    width: 100%;
+  }
+  .banner{
+    width: 100%;
+  }
+  .countdown-area{
+    width: 100%;
+  }
+  .area-text-2{
+    flex-direction: column;
+  }
+  .area-text{
+    flex-direction: column;
+  }
+  .carousel{
+    margin: 0 20px;
+    padding: 0;
+    flex-direction: row;
+  }
+  .top{
+    width: 100%;
+  }
+  .top-navbar-scrolling {
+    position: fixed;
+    width: calc(100% - 40px);
+    z-index: 1000; !* Ensure navbar stays on top of other content *!
+  }
+  .scrolled-down {
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
+  }
+  .scrolled-up {
+    transform: translateY(0);
+    transition: all 0.3s ease-in-out;
+  }
+  .top-navbar {
+    transition: transform 0.3s ease-in-out;
+  }
+  .scrolled {
+    transform: translateY(-100%);
+  }
+  .#{$prefix}top-wrapper {
+    display: block;
+  }
+  .#{$prefix}top-wrapper {
+    display: block;
+  }
+  .#{$prefix}top-wrapper {
+    display: block;
+  }
+}*/
+
+//smaller then 1685px
+@media screen and (max-width: 1685px) {
+  .countdown-timestamp{
+    display: flex;
+    justify-content: center;
+  }
+  .brand-icon{
+    display: none !important;
+  }
+  .categories{
+    display: none !important;
+  }
+  .view-more-share{
+    margin-top: 0 !important;
+  }
+  .total-projects{
+    margin-top: 25px;
+  }
+  .countdown-section{
+    margin-left: 0 !important;
+  }
+  .container {
+    margin-top: 0 !important;
+  }
+  .hide-on-mobile{
+    display: none;
+  }
+  .categories{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+  }
+  .countable{
+    margin-top: 18px;
+    width: 100%;
+  }
+  .banner{
+    width: 100%;
+  }
+  .countdown-area{
+    width: 100%;
+  }
+  .area-text-2{
+    flex-direction: row;
+    margin-right: 0;
+  }
+  .area-text{
+    flex-direction: column;
+  }
+  .carousel{
+    margin: 0 20px;
+    padding: 0;
+    flex-direction: row;
+  }
+  .top{
+    width: 100%;
+  }
+  .top-navbar-scrolling {
+    position: fixed;
+    width: calc(100% - 40px);
+    z-index: 1000; /* Ensure navbar stays on top of other content */
+  }
+  .scrolled-down {
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
+  }
+  .scrolled-up {
+    transform: translateY(0);
+    transition: all 0.3s ease-in-out;
+  }
+  .top-navbar {
+    transition: transform 0.3s ease-in-out;
+  }
+  .scrolled {
+    transform: translateY(-100%);
+  }
+  .#{$prefix}top-wrapper {
+    display: block;
+  }
+  .#{$prefix}top-wrapper {
+    display: block;
+  }
+  .#{$prefix}top-wrapper {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .brand-icon{
+    display: none !important;
+  }
+  .categories{
+    display: none !important;
+  }
+  .view-more-share{
+    margin-top: 0 !important;
+  }
+  .total-projects{
+    margin-top: 25px;
+  }
+  .countdown-section{
+    margin-left: 0 !important;
+  }
+  .lecturer-show{
+  }
+  .container {
+    margin-top: 0 !important;
+  }
+  .hide-on-mobile{
+    display: none;
+  }
+  .categories{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+  }
+  .countable{
+    margin-top: 18px;
+    width: 100%;
+  }
+  .banner{
+    display: none !important;
+    width: 100%;
+  }
+  .countdown-area{
+    width: 100%;
+  }
+  .area-text-2{
+    flex-direction: row;
+  }
+  .area-text{
+    flex-direction: column;
+  }
+  .carousel{
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+  }
+  .top{
+    width: 100%;
+  }
+  .top-navbar-scrolling {
+    position: fixed;
+    width: calc(100% - 40px);
+    z-index: 1000; /* Ensure navbar stays on top of other content */
+  }
+  .scrolled-down {
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
+  }
+  .scrolled-up {
+    transform: translateY(0);
+    transition: all 0.3s ease-in-out;
+  }
+  .top-navbar {
+    transition: transform 0.3s ease-in-out;
+  }
+  .scrolled {
+    transform: translateY(-100%);
+  }
+  .#{$prefix}top-wrapper {
+    display: block;
+  }
+  .#{$prefix}top-wrapper {
+    display: block;
+  }
+  .#{$prefix}top-wrapper {
+    display: block;
   }
 }
 </style>

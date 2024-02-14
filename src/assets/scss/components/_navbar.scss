@@ -1,5 +1,5 @@
-.top{
-  &-navbar{
+.top {
+  &-navbar {
     margin: 20px;
     width: calc(100% - 40px);
     background-color: #014164;
@@ -11,14 +11,20 @@
     padding: 10px 20px;
   }
 
-  &-text{
+  &-text {
     font: 300 18px/22px "Poppins", sans-serif;
     font-size: 18px;
     font-weight: 500;
     color: #fff;
+    cursor: pointer;
+    &-offcanvas {
+      font-size: 20px;
+      font-weight: 600;
+      color: #000;
+    }
   }
 
-  &-text.active{
+  &-text.active {
     font-weight: 600;
     border-bottom: 2px solid #fff;
   }
@@ -30,6 +36,7 @@
     padding: 10px 20px;
     background-color: #fff;
     border-radius: 10px;
+
     &-text {
       font: 300 18px/22px "Poppins", sans-serif;
       font-size: 18px;
@@ -37,9 +44,10 @@
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1280px) {
     .top-navbar {
-      flex-direction: column;
+      margin: 10px auto;
+      flex-direction: row;
       height: auto;
     }
     .top-text {
@@ -49,4 +57,52 @@
       margin-top: 10px;
     }
   }
+
+  /* Additional Media Query for smaller screens */
+  @media screen and (max-width: 576px) {
+    .top-navbar {
+      margin: 10px auto 0;
+      width: 95%;
+      padding: 0; /* Adjust padding for smaller screens */
+    }
+    .ite-icon-ite-alumni{
+      scale: 0.7;
+    }
+    .top-menu{
+      margin-top: 0;
+      margin-right: 10px;
+      padding: 4px 8px; /* Adjust padding for smaller screens */
+      &-text {
+        font-size: 14px; /* Decrease font size for smaller screens */
+      }
+    }
+    .top {
+      &-text {
+        font-size: 14px; /* Decrease font size for smaller screens */
+      }
+      &-menu {
+        padding: 4px 8px; /* Adjust padding for smaller screens */
+      }
+    }
+  }
+}
+
+.top-navbar-scrolling {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #014164;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 1280px) {
+    .top-navbar-scrolling {
+        padding: 10px 10px;
+    }
 }

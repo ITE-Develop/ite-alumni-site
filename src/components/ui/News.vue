@@ -54,7 +54,6 @@ const newsItems = [
       <button class="see-more">See More</button>
     </div>
     <div class="row">
-
       <div v-for="(item, index) in newsItems" :key="index" class="col-md-2">
         <div class="news-card d-flex flex-column">
           <div class="news-content-wrapper">
@@ -186,5 +185,22 @@ const newsItems = [
   border: 1px solid #FF6B00;
   padding: 10px 20px;
   border-radius: 10px;
+}
+
+//responsive design
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 40px 20px 0;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .container {
+    margin: 40px 40px 0;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  //only 3 news items per row
 }
 </style>

@@ -31,4 +31,16 @@ import CountDown from "@/components/ui/CountDown.vue";
   transform: translateY(0);
   transition: all 0.3s ease-in-out;
 }
+
+@media screen and (max-width: 768px) {
+  .top {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .top {
+    width: 100%;
+  }
+}
 </style>

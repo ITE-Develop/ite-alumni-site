@@ -49,4 +49,22 @@ setTitle("ITE Alumni");
 .scrolled {
   transform: translateY(-100%);
 }
+
+@media screen and (max-width: 768px) {
+  .#{$prefix}top-wrapper {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .#{$prefix}top-wrapper {
+    display: block;
+  }
+}
+
+  @media screen and (max-width: 576px) {
+    .#{$prefix}top-wrapper {
+      display: block;
+    }
+  }
 </style>
