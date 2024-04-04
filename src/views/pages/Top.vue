@@ -1,33 +1,39 @@
 <script setup>
-import {TopNavbar} from "@/components/ui";
+import { TopNavbar } from "@/components/ui";
 import News from "@/components/ui/News.vue";
 import CountDown from "@/components/ui/CountDown.vue";
 import Projects from "@/components/ui/Projects.vue";
+import Lectures from "@/components/ui/Lecturer.vue";
+import Profile from "@/components/ui/ProfileFour.vue";
 </script>
 
 <template>
   <div class="top">
-    <TopNavbar/>
+    <TopNavbar />
     <div class="content">
       <div class="h-100"></div>
-      <CountDown/>
+      <CountDown />
       <div class="display">
-        <News/>
-        <Projects/>
+        <News />
+        <Projects />
       </div>
+      <Profile />
+      <Lectures />
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.display{
+.display {
   display: flex;
   justify-content: space-between;
 }
+
 .vertical-line-top {
   width: 1px;
   height: 100%;
 }
+
 .top-navbar-scrolling {
   position: fixed;
   width: calc(100% - 40px);
