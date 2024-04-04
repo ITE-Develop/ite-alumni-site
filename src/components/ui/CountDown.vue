@@ -61,7 +61,15 @@ onUnmounted(() => clearInterval(refreshInterval));
         <div class="d-flex area-text-2 mt-4 justify-content-between">
           <div class="d-flex flex-column lecturer-show">
             <img :src="data?.photo" alt="" class="image-lecturer" />
-            <div class="d-flex flex-column title px-4 py-2">
+            <div class="d-flex flex-column title px-3 py-1">
+              <div class="title-lecturer">Lecturer</div>
+              <div class="name-lecturer">{{ data?.name }}</div>
+            </div>
+          </div>
+
+          <div class="flex-column hide-lecturer-show">
+            <img :src="data?.photo" alt="" class="image-lecturer" />
+            <div class="d-flex flex-column title px-3 py-1">
               <div class="title-lecturer">Lecturer</div>
               <div class="name-lecturer">{{ data?.name }}</div>
             </div>
@@ -100,7 +108,7 @@ onUnmounted(() => clearInterval(refreshInterval));
                         <div class="days mt-2">Days</div>
                       </div>
                     </div>
-                    <div class="hours hide-on-mobile">
+                    <div class="hours hide-hour">
                       <div class="mx-2 divide">:</div>
                       <div class="d-flex flex-column text-center">
                         <div class="day-count">
@@ -109,7 +117,7 @@ onUnmounted(() => clearInterval(refreshInterval));
                         <div class="days mt-2">Hours</div>
                       </div>
                     </div>
-                    <div class="minutes hide-on-mobile">
+                    <div class="minutes hide-minute">
                       <div class="mx-2 divide">:</div>
                       <div class="d-flex flex-column text-center">
                         <div class="day-count">
@@ -118,7 +126,7 @@ onUnmounted(() => clearInterval(refreshInterval));
                         <div class="days mt-2">Minutes</div>
                       </div>
                     </div>
-                    <div class="seconds hide-on-mobile">
+                    <div class="seconds hide-second">
                       <div class="mx-2 divide">:</div>
                       <div class="d-flex flex-column text-center">
                         <div class="day-count">
@@ -162,6 +170,22 @@ onUnmounted(() => clearInterval(refreshInterval));
 </template>
 <style lang="scss" scoped>
 @import "@/assets/scss/theme/default/_top.scss";
+
+.hide-lecturer-show {
+  display: none;
+}
+
+.hide-hour {
+  display: flex;
+}
+
+.hide-second {
+  display: flex;
+}
+
+.hide-minute {
+  display: flex;
+}
 
 .view-more-share {
   margin: 0 16px;
@@ -216,6 +240,17 @@ onUnmounted(() => clearInterval(refreshInterval));
 }
 
 @media screen and (max-width: 576px) {
+  .total-projects {
+    display: flex;
+    flex-direction: column;
+  }
+  .hide-second {
+    display: none;
+  }
+
+  .hide-minute {
+    display: none;
+  }
   .view-more-btn {
     font-size: 16px;
   }
@@ -405,6 +440,17 @@ onUnmounted(() => clearInterval(refreshInterval));
     display: block;
   }
 }*/
+@media screen and (max-width: 468px) {
+  .hide-hour {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .hide-second {
+    display: none;
+  }
+}
 
 //smaller then 1685px
 @media screen and (max-width: 1685px) {
@@ -427,7 +473,7 @@ onUnmounted(() => clearInterval(refreshInterval));
     margin-top: 25px;
   }
   .countdown-section {
-    margin-left: 0 !important;
+    margin-left: 20px !important;
   }
   .container {
     margin-top: 0 !important;
@@ -495,7 +541,16 @@ onUnmounted(() => clearInterval(refreshInterval));
   }
 }
 
+@media screen and (max-width: 1060px) {
+  .hide-lecturer-show {
+    display: none !important;
+  }
+}
+
 @media screen and (max-width: 1280px) {
+  .hide-lecturer-show {
+    display: flex;
+  }
   .brand-icon {
     display: none !important;
   }
