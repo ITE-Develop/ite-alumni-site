@@ -48,7 +48,7 @@ const newsItems = [
 </script>
 
 <template>
-<div class="container col-md-6">
+<div class="container">
     <div class="d-flex  justify-content-between">
         <div class="title">News</div>
         <button class="see-more">View All →</button>
@@ -210,13 +210,15 @@ const newsItems = [
   }
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (min-width: 1600px) {
   .container {
-    margin: 40px 40px 0;
+    margin: 16px 10px 0 80px;
   }
 }
 
 @media screen and (max-width: 1280px) {
-  //only 3 news items per row
+  .container {
+    margin: 40px 40px 0 40px;
+  }
 }
 </style>

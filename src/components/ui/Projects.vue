@@ -225,5 +225,9 @@ const newsItems = [
 
 @media screen and (max-width: 1280px) {
   //only 3 news items per row
+  .container-project {
+  font-family: $font-family;
+  margin: 16px 40px 0 40px;
+}
 }
 </style>

@@ -46,7 +46,8 @@
 
   @media screen and (max-width: 1280px) {
     .top-navbar {
-      margin: 10px auto;
+      margin: 16px 40px;
+      width: calc(100% - 80px);
       flex-direction: row;
       height: auto;
     }
@@ -56,14 +57,18 @@
     .top-menu {
       margin-top: 10px;
     }
+
+    .top-navbar-scrolling {
+        padding: 10px 10px;
+    }
   }
 
   /* Additional Media Query for smaller screens */
   @media screen and (max-width: 576px) {
     .top-navbar {
-      margin: 10px auto 0;
-      width: 95%;
-      padding: 0; /* Adjust padding for smaller screens */
+      margin: 16px 40px;
+      width: calc(100% - 80px);
+      padding: 0;
     }
     .ite-icon-ite-alumni{
       scale: 0.7;
@@ -99,10 +104,4 @@
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-}
-
-@media screen and (max-width: 1280px) {
-    .top-navbar-scrolling {
-        padding: 10px 10px;
-    }
 }

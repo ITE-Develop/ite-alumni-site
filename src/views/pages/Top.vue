@@ -11,7 +11,7 @@ import Projects from "@/components/ui/Projects.vue";
     <div class="content">
       <div class="h-100"></div>
       <CountDown/>
-      <div class="d-flex">
+      <div class="display">
         <News/>
         <Projects/>
       </div>
@@ -20,6 +20,10 @@ import Projects from "@/components/ui/Projects.vue";
 </template>
 
 <style lang="scss" scoped>
+.display{
+  display: flex;
+  justify-content: space-between;
+}
 .vertical-line-top {
   width: 1px;
   height: 100%;
@@ -38,6 +42,13 @@ import Projects from "@/components/ui/Projects.vue";
 .scrolled-up {
   transform: translateY(0);
   transition: all 0.3s ease-in-out;
+}
+
+//small screen than 1280px
+@media screen and (max-width: 1280px) {
+  .display {
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 768px) {
