@@ -99,15 +99,18 @@ onUnmounted(() => clearInterval(refreshInterval));
                         <div class="months mt-2">Months</div>
                       </div>
                     </div>
-                    <div class="d-flex days">
-                      <div class="mx-2 divide">:</div>
-                      <div class="d-flex flex-column text-center">
-                        <div class="day-count">
-                          {{ data.days ? data.days : 0 }}
+                    <div class="hide-day">
+                      <div class="d-flex days">
+                        <div class="mx-2 divide">:</div>
+                        <div class="d-flex flex-column text-center">
+                          <div class="day-count">
+                            {{ data.days ? data.days : 0 }}
+                          </div>
+                          <div class="days mt-2">Days</div>
                         </div>
-                        <div class="days mt-2">Days</div>
                       </div>
                     </div>
+
                     <div class="hours hide-hour">
                       <div class="mx-2 divide">:</div>
                       <div class="d-flex flex-column text-center">
@@ -237,6 +240,12 @@ onUnmounted(() => clearInterval(refreshInterval));
 
 .hide-on-mobile {
   display: flex;
+}
+
+@media screen and (max-width: 382px) {
+  .hide-day {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 576px) {
