@@ -2,20 +2,28 @@
 import {TopNavbar} from "@/components/ui";
 import News from "@/components/ui/News.vue";
 import CountDown from "@/components/ui/CountDown.vue";
+import Projects from "@/components/ui/Projects.vue";
 </script>
 
 <template>
   <div class="top">
     <TopNavbar/>
     <div class="content">
+      <div class="h-100"></div>
       <CountDown/>
-      <News/>
-      <News/>
+      <div class="d-flex">
+        <News/>
+        <Projects/>
+      </div>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
+.vertical-line-top {
+  width: 1px;
+  height: 100%;
+}
 .top-navbar-scrolling {
   position: fixed;
   width: calc(100% - 40px);

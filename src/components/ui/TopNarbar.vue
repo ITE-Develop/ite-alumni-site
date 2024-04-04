@@ -5,7 +5,7 @@ const menu = [
   { name: "Student", link: "/student" },
   {name: "Lecturer", link: "/lecturer"},
   {name: "News", link: "/news"},
-  {name: "Article", link: "/article"},
+  {name: "Projects", link: "/projects"},
   {name: "About", link: "/about"},
   {name: "Contacts", link: "/contacts"},
 ];

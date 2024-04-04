@@ -2,24 +2,24 @@
 
 const newsItems = [
   {
-    category: "Category 1 1231231 123213 14124312234154 142313214123 ",
-    title: "TITLE OF NEWS 1 123412 123 15 562645 13414 26 643646346",
-    timestamp: "10 / 01 / 2023 125  124 53426 634631 41324123",
-    description: "Description ewzxcscz New Artiwe1231322ic ,Newzxcc1111111111 11111111111 11111111111111111 1312313211112311111 1111111111111111111111 ,Newzxcscz New Ar Description ewzxcscz New Articrtic ,Newzxcc ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz",
+    category: "Category 1",
+    title: "TITLE OF NEWS 1",
+    timestamp: "10 / 01 / 2023",
+    description: "Description ewzxcscz New Articrtic ,Newzxcc ,Newzxcscz Neq ewqe eae q wqe qwe e qeqw eew Ar Description ewzxcscz New Articrtic ,Newzxcc ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz",
     image: "https://res.cloudinary.com/zerovector/image/upload/v1707731744/rinqwxiiabzhwvinrne2.jpg"
   },
   {
     category: "Category 1",
     title: "TITLE OF NEWS 1",
     timestamp: "10 / 01 / 2023",
-    description: "Description ewzxcscz New Articrtic ,Newzxcc ,Newzxcscz New Ar Description ewzxcscz New Articrtic ,Newzxcc ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz",
+    description: "Desc Article Dscz New Article Description ,Newzxcs  asd dwfg  wr cz qwe qt qwe wqr 3 tqfd frqr q rqw r2 afdf qr3 rqw r31rqwr afq3 rqrs fdg3t qwer rqft fqet13 rqfg4 qwf tg1 3 fdg rqffggdsg qfeq qwee qfdf3r qf3",
     image: "https://res.cloudinary.com/zerovector/image/upload/v1707731704/ondtmtzyasxnsmezqkgc.jpg"
   },
   {
     category: "Category 1",
     title: "TITLE OF NEWS 1",
     timestamp: "10 / 01 / 2023",
-    description: "Description ewzxcscz New Articrtic ,Newzxcc ,Newzxcscz New Ar Description ewzxcscz New Articrtic ,Newzxcc ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz",
+    description: "Description ewzxcscz New Articrtic ,Newzxcc ,Newzxcscz New Ar Description ewzxcsc123123213z New Articrtic ,Newzxcc ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz",
     image: "https://res.cloudinary.com/zerovector/image/upload/v1707731610/avzhsqx6u4nykdlovqwo.jpg"
   },
   {
@@ -32,8 +32,8 @@ const newsItems = [
   {
     category: "Category 1",
     title: "TITLE OF NEWS 1",
-    timestamp: "10 / 01 / 2023 1231234 1234124",
-    description: "Description ewzxcscz New Articrtic ,Newzxcc ,Newzxcscz Ne12222222222222222222222w Ar Description ewzxcscz New Articrtic ,Newzxcc ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz",
+    timestamp: "10 / 01 / 2023",
+    description: "Description ewzxcscz New Articrtic ,Newzxcc ,Newzxcscz New Ar Description ewzxcscz New Articrtic ,Newzxcc ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz New Article Description ,Newzxcscz",
     image: "https://res.cloudinary.com/zerovector/image/upload/v1707362449/btp3l1qacuguemu6lrjm.png"
   },
   {
@@ -48,38 +48,61 @@ const newsItems = [
 </script>
 
 <template>
-<div class="container col-md-6">
-    <div class="d-flex  justify-content-between">
-        <div class="title">News</div>
-        <button class="see-more">View All →</button>
+  <div class="container-project">
+    <div class="d-flex justify-content-between">
+      <div class="title">Projects</div>
+      <button class="see-more">View All →</button>
     </div>
-    <div class="row ">
-        <div v-for="(item, index) in newsItems.slice(0, 3)" :key="index" class="col-md-4">
-            <div class="news-card d-flex flex-column">
-                <div class="news-content-wrapper">
-                    <div class="category-header">{{ item.category }}</div>
-                    <div class="d-flex">
-                        <img :alt="item.title" :src="item.image" class="news-image">
-                    </div>
-                    <div class="news-content overflow-hidden">
-                        <div class="title-news">{{ item.title }}</div>
-                        <div class="timestamp">{{ item.timestamp }}</div>
-                        <div class="description">{{ item.description }}</div>
-                        <div class="view-more-btn text-center">View More →</div>
-                    </div>
-                </div>
+    <div class="row margin-20 justify-content-between align-items-center gap-3">
+      <div v-for="(item, index) in newsItems.slice(0, 2)" :key="index">
+        <div class="news-card d-flex">
+          <div class="news-content-wrapper d-flex">
+            <div class="d-flex">
+              <img :alt="item.title" :src="item.image" class="news-image">
             </div>
+            <div class="d-flex flex-column justify-content-between w-100 ms-4">
+               <div class="d-flex justify-content-between">
+                  <div class="d-flex flex-column">
+                    <div class="title-news">{{ item.title }}</div>
+                    <div class="timestamp">{{ item.timestamp }}</div>
+                  </div>
+
+                  <div class="d-flex flex-column">
+                    <div class="title-news">{{ item.category }}</div>
+                  </div>
+               </div>
+              <div class="news-content overflow-hidden h-100">
+                <div class="description">{{ item.description }}</div>
+              </div>
+              <div class="horizontal-bar"></div>
+              <div class="d-flex justify-content-between align-items-end">
+                <div class="d-flex flex-column justify-content-center">
+                  <div class="text-center fs-6">Research and Develop By :</div>
+                  <div class="fs-5">Mai Reaksa</div>
+                </div>
+                <div class="view-more-btn text-center">View More →</div>
+              </div>
+            </div>
+
+          </div>
+
         </div>
+      </div>
     </div>
-</div>
+  </div>
 
 
 </template>
 
 <style lang="scss" scoped>
+.margin-20 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .news-content-wrapper {
   flex-grow: 1;
-  padding: 20px;
+  padding: 15px;
 }
 
 .view-more-btn {
@@ -109,7 +132,7 @@ const newsItems = [
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
   line-height: 1.5;
 }
@@ -118,12 +141,6 @@ const newsItems = [
 .timestamp {
   font-size: 14px;
   color: #FF6B00;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  line-height: 1.5;
 }
 
 .title-news {
@@ -150,16 +167,9 @@ const newsItems = [
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  line-height: 1.5;
 }
 
 .news-image {
-  width: 100%;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 10px;
@@ -168,7 +178,6 @@ const newsItems = [
 
 .news-card {
   background-color: #fff;
-  margin: 20px 0;
   border-radius: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   display: flex;
@@ -177,14 +186,12 @@ const newsItems = [
   font-size: 20px;
   font-weight: 600;
   color: #FF6B00;
-  padding: 5px 5px;
-  overflow: hidden;
   transition: all 0.3s;
 }
 
-.container {
+.container-project {
   font-family: $font-family;
-  margin: 16px 16px 0 80px;
+  margin: 16px 80px 0 16px;
 }
 
 .title {

@@ -40,8 +40,8 @@ onUnmounted(() => clearInterval(refreshInterval));
 </script>
 
 <template>
-    <div class="container mt-5">
-      <div class="d-flex carousel">
+    <div class="container mt-3">
+      <div class="d-flex container-hero carousel">
         <div class="d-flex banner">
           <img :src="data?.photo" alt="" class="banner-image"/>
         </div>
@@ -148,6 +148,10 @@ onUnmounted(() => clearInterval(refreshInterval));
 </template>
 <style lang="scss" scoped>
 @import "@/assets/scss/theme/default/_top.scss";
+
+.container-hero {
+    background-color: #FFFFFF;
+  }
 .top-category{
   font-family: $font-family;
   background-color: #014164;
