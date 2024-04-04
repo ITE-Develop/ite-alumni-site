@@ -250,6 +250,7 @@ onUnmounted(() => clearInterval(refreshInterval));
 
 @media screen and (max-width: 576px) {
   .total-projects {
+    margin-top: 25px !important;
     display: flex;
     flex-direction: column;
   }
