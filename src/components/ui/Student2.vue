@@ -61,7 +61,7 @@ const newsItems = [
 <template>
   <div class="container d-flex gap-2">
     <div
-      v-for="(item, index) in newsItems.slice(0, 2)"
+      v-for="(item, index) in newsItems.slice(0, 1)"
       :key="index"
       class="col-md-3"
     >
@@ -162,6 +162,25 @@ const newsItems = [
                 <div class="view-more-btn text-center">View More →</div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      v-for="(item, index) in newsItems.slice(0, 1)"
+      :key="index"
+      class="col-md-3"
+    >
+      <div class="news-card d-flex flex-column mt-1">
+        <div class="news-content-wrapper">
+          <div class="d-flex">
+            <img :alt="item.title" :src="item.image" class="news-image" />
+          </div>
+          <div class="news-content overflow-hidden">
+            <div class="title-news">{{ item.title }}</div>
+            <div class="timestamp">{{ item.timestamp }}</div>
+            <div class="description">{{ item.description }}</div>
+            <div class="view-more-btn text-center">View More →</div>
           </div>
         </div>
       </div>
